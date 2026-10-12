@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- Root element, lang="en" tells the browser the page is in English -->
+<html lang="en">
+
+<head> <!-- Head section holds page info, nothing here is visible on screen -->
+
+    <!-- Allows special characters like é, ñ, € to display correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Tells Internet Explorer to use its most modern rendering engine
+     instead of an older compatibility mode, so the page displays correctly, its all about compatibility -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Makes the page fit properly on mobile screens at normal zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text that appears on the browser tab -->
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- h1,h2 are inline elements, they are not block elements, example of block elements are p, div, span -->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Link to YouTube</a>
+    <!-- target="_blank" opens the link in a new tab, target="_self" opens the link in the same tab, but by default it opens in the same tab -->
+    <br><br>
+    <!-- the line break tag is used to create a line break, it is not visible on screen and the alt attribute is used to add a description of the image if the image cannot be displayed -->
+    <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Lights" width="200" height="150">
+    <!-- more width,less height to balance the image in px, however using percentage is relative to the screen size -->
+    <h2>Hello 1</h2>
+
+    <p><b>This</b> is a <i>test</i> of <b><u>bold, underlined text</b></u> and <s>strikethrough</s> text.</p>
+
+    <p><strong>This</strong> is a <em>test</em> of <u>bold</u> and <mark>highlight</mark> text.</p>
+<!-- ul means unordered list, ol means ordered list -->
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+   <marquee behavior="scroll" direction="left">This is a scrolling text</marquee>
+   <marquee behavior="scroll" scrollamount ="20" direction="right" style="height: 100vh;">This is <br>a scrolling <br> text</marquee>
+   <!-- vh means viewport height, in this case 100vh means 100% of the viewport height, in other words the height of the screen -->
+   <!-- the behavior attribute is used to specify the scrolling behavior, the direction attribute is used to specify the scrolling direction -->
+   <!-- the marquee tag is used to create a scrolling text -->
+    <!-- the scrollamount attribute seems to specify the speed of the scrolling -->
+    <ol>
+        <!-- the s tag is used to strikethrough text, -->
+        <li><s>Apple</s></li>
+        <li>Bread</li>
+        <li>Juice</li>
+        <li><sub>Apple</sub></li>
+        <li><sup>Apple</sup></li>
+        <!-- the sub tag is used to subscript text, the sup tag is used to superscript text -->
+         <li><q>Milk</q></li>
+         <!-- the q tag is used to quote text -->
+    </ol>
+    
+    <table border="2" width="600">
+        <tr>
+            <!-- th means table header, td means table data -->
+             <!-- the first row is the header, the second row is the data -->
+              <th>Serial Number</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+            <td>(123) 456-7890</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>jane@example.com</td>    
+            <td>(123) 456-7890</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Joe</td>
+            <td>Doe</td>
+            <td>joe@example.com</td>
+            <td>(123) 456-7890</td>
+    </table>
+<hr><br>
+    <form>
+        <!-- label is used to identify the input field -->
+        <label>Name:</label>
+        <!-- the name attribute is used to identify the input field, the type text means the input field is a text field -->
+        <input type="text" name="name" placeholder="Enter your full name" required>
+        <br><br>
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <!-- the radio button is used to select one option from a list of options, the value attribute is used to identify the option -->
+        <br><br>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" name="hobbies" value="reading">Reading
+        <input type="checkbox" name="hobbies" value="coding">Coding
+        <input type="checkbox" name="hobbies" value="sports">Sports
+        <input type="checkbox" name="hobbies" value="movies">Watching Movies
+        <!-- the checkbox is used to select multiple options from a list of options, the value attribute is used to identify the option -->
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required>
+        <!-- the tel input is used to select a phone number, the name attribute is used to identify the phone number -->
+         <!-- the required attribute is used to make the input field required, it is used to validate the form -->
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" placeholder="Enter your date of birth">
+        <!-- the date input is used to select a date, the name attribute is used to identify the date -->
+        <br><br>
+
+        <label>Upload File:</label>
+        <input type="file" name="file">
+        <!-- the file input is used to upload files, the name attribute is used to identify the file -->
+        <br><br>
+
+        <label>Choose your favorite Color:</label>
+        <input type="color" name="color" value="#e0e0e0">
+        <!-- the color input is used to select a color, the name attribute is used to identify the color -->
+        <br><br>
+
+        <label>Choose your favorite Character:</label>
+        <select>
+            <option selected disabled>Select a Character e.g Harry Potter</option>
+            <option>Harry Potter</option>
+            <option>Hermione Granger</option>
+            <option>Ron Weasley</option>
+            <option>Ginny Weasley</option>
+            <option>Draco Malfoy</option>
+            <option>Luna Lovegood</option>
+            <option>Severus Snape</option>
+        </select>
+        <!-- the select tag is used to select an option from a list of options, the name attribute is used to identify the character -->
+    
+        <!-- the datalist is used to provide a list of options for the user to choose from, the name attribute is used to identify the character -->
+         <!-- the select tag is used to select an option from a list of options, the id attribute is used to identify the select tag -->
+        <br><br>
+
+        <label>Enter time when you started learning HTML:</label>
+        <input type="time" name="time" placeholder="Enter your time">
+        <!-- the time input is used to select a time, the name attribute is used to identify the time -->
+        <br><br>
+        <details>
+            <summary>Click to see the details</summary>
+            <p>What did you think was supposed to happen?&#128515;</p>
+            <!-- the details tag is used to create a collapsible element, the summary tag is used to create a summary for the collapsible element -->
+            <!-- To let the browser understand that you are displaying a character, you must start the entity number with &# and end it with ; -->
+        </details>
+
+        <details>
+            <summary>Click to see the video</summary>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UkzcdEzpi-k?si=ti6btvmL9TWbbp5O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </details>
+        <!-- if the tag isnt working go the youtube video, select share,select embed and copy the iframe code -->
+        <!-- the iframe tag is used to embed an external webpage into the current webpage -->
+        <!-- <dialog open>
+            Yo! I am a dialog box!
+          
+        </dialog> -->
+          <!-- the dialog tag is used to create a dialog box, the open attribute is used to open the dialog box -->
+<br><hr>
+        <progress value="70" max="100" ></progress>
+        <br>
+        <!-- the progress tag is used to create a progress bar -->
+        <input type="submit" value="Submit">
+<br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* in css, h2 is a selector, h2 means heading 2, not a heading tag */
+h2 {
+    color: blue;
+    /* color is the property, blue is the value */
+    background-color: chocolate;
+
+}
+
+.heading {
+    color: rgb(255, 255, 253,0.5);
+    background-color: black;
+    width: 300px;
+    /* min-height: 70px; */
+    /* the min-height property is used to set the minimum height of an element and what it does is it will not allow the element to be smaller than the value specified.Allows authors to constrain content height to a certain range in this case not less than 70px */
+    font-size: 105px;
+    font-family: Arial, Helvetica, sans-serif;
+     /* the font-family property is used to specify the font of an element and it can take multiple values, the first value is the preferred font and if that font is not available, it will use the next value and so on */
+     /* the rgba() function is used to specify the color of an element and it takes four values, the first value is the red value, the second value is the green value, the third value is the blue value and the fourth value is the alpha value */
+     /* the hex value is used to specify the color of an element and it takes three values, the first value is the red value, the second value is the green value and the third value is the blue value in base 16 */
+}
+
+.card{
+    width:300px;
+    border:2px solid red;
+    padding: 10px;
+    margin: 20px;
+    
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    background: red;
+    color: white;
+    display: inline-block;
+}
+/* the three main types of display include: block, inline and inline-block */
+
+span{
+    background: blue;
+    color: white;
+    display: block;
+    margin:5px;
+}
+/* when styling and confused use border to know what you are styling */
+/* the margin property is used to set the margin of an element and it can take multiple values, the first value is the top value, the second value is the right value, the third value is the bottom value and the fourth value is the left value */
+/* the padding property is used to set the padding of an element and it can take multiple values, the first value is the top value, the second value is the right value, the third value is the bottom value and the fourth value is the left value */
+/* the border property is used to set the border of an element and it can take multiple values, the first value is the top value, the second value is the right value, the third value is the bottom value and the fourth value is the left value */
+/* the rgba() function is used to specify the color of an element and it takes four values, the first value is the red value, the second value is the green value, the third value is the blue value and the fourth value is the alpha value */
+/* the hex value is used to specify the color of an element and it takes three values, the first value is the red value, the second value is the green value and the third value is the blue value in base 16 */
+/* the class attribute is used to add a class to an element and it will apply to the element it is used on and all of its children */

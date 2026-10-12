@@ -1,0 +1,100 @@
+/* 
+   WHAT THIS CODE DOES:
+   This CSS resets default browser spacing, sets up a responsive navigation bar,
+   and formats a clean layout with three sections: a logo/brand on the left, 
+   main navigation links in the middle, and authentication (login/signup) links 
+   on the right, complete with smooth hover effects.
+   */
+
+* {
+    margin: 0; /* Removes default outer spacing added by browsers */
+    padding: 0; /* Removes default inner padding added by browsers */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Sets fallback font stack from custom to generic */
+    /* box-sizing: border-box; */
+     /* Includes padding and borders in total element width/height calculations */
+}
+
+body{
+    height: 300vh;
+
+}
+
+.container{
+    position: relative;
+    
+}
+
+nav {
+    display: flex; /* Turns the nav container into a flexible row layout */
+    justify-content: space-between; /* Spreads logo, main menu, and auth menu evenly across the width */
+    background: black; /* Sets the background color of the navigation bar to black */
+    color: white; /* Sets default text color inside the nav bar to white */
+    align-items: center; /* Vertically aligns all items in the center of the nav bar */
+    padding: 20px 0; /* Adds 20px space inside top/bottom, 0px on left/right */
+    position: fixed; /* Fixes the nav bar to the top of the viewport, so it stays visible on scroll */
+    width: 100%; /* Sets the nav bar to the full width of the viewport */
+}
+
+.logo-header-nav {
+    /* margin-left: 20px; */ /* Commented out: previously added left spacing */
+    /* border: 1px solid; */ /* Commented out: previously used for debugging layout boundaries */
+    width: 20%; /* Restricts the logo container to 20% of the nav bar's total width */
+    /* text-align: center; */ /* Commented out: previously centered text alignment */
+}
+
+.logo-header-nav h3 {
+    border: 1px solid; /* Adds a solid line border around the logo heading */
+    width: fit-content; /* Shrinks the element's width to match only the length of its text */
+    margin: 0 auto; /* Centers the heading horizontally inside its parent container */
+    padding: 5px; /* Adds 5px space inside the border around the text */
+    border-radius: 6px; /* Rounds the sharp corners of the border by 6 pixels */
+}
+
+.logo-header-nav h3:hover {
+    cursor: pointer; /* Changes mouse cursor to a hand/pointer when hovering */
+    background: white; /* Inverts background color to white on hover */
+    color: black; /* Inverts text color to black on hover */
+}
+
+.main-menu-nav {
+    /* border: 1px solid; */ /* Commented out debugging border */
+    width: 50%; /* Assigns 50% of the nav bar width to the central navigation menu */
+}
+
+.main-menu-nav ul, .auth-menu-nav ul {
+    list-style: none; /* Removes default bullet points from unordered lists */
+    display: flex; /* Lays list items out horizontally in a row */
+    justify-content: space-evenly; /* Distributes list items with equal spacing between and around them */
+}
+
+.main-menu-nav ul li a, .auth-menu-nav ul li a {
+    color: white; /* Sets navigation link text color to white */
+    text-decoration: none; /* Removes default link underlines */
+    border-bottom: 2px solid transparent; /* Creates an invisible bottom border to prevent layout jitter on hover */
+    padding-bottom: 3px; /* Adds 3px space between the link text and its bottom border */
+}
+
+.main-menu-nav ul li a:hover, .auth-menu-nav ul li a:hover {
+    border-bottom: 3px solid white; /* Highlights link on hover with a visible white underline border */
+    cursor: pointer; /* Shows interactive hand pointer when hovering over links */
+}
+
+.auth-menu-nav {
+    /* border: 1px solid; */ /* Commented out debugging border */
+    width: 20%; /* Assigns remaining 20% of the nav bar width to the authentication menu */
+}
+
+.mobile-nav {
+    display: none; /* Hides the mobile navigation bar on large screens */
+}
+
+@media (max-width: 480px) {
+    .main-menu-nav, .auth-menu-nav {
+        visibility: hidden; /* Hides the navigation bar on small screens, its there but invisible */ 
+        display: none; /* Hides the navigation bar on small screens */
+    }
+
+    .mobile-nav {
+        display: block; /* Shows the mobile navigation bar on small screens */
+    }
+}

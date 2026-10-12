@@ -1,0 +1,43 @@
+body{
+    height: 200vh;
+    /* 200vh means that the height of the viewport is 200 viewport units */
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 2px solid;
+    margin: 50px;
+}
+
+.static-box{
+    position: static;
+    background: lightgrey;
+    padding: 10px;
+    
+}
+
+.relative-box{
+    position: relative;
+    background: lightblue;
+    padding: 10px;
+    top:10px;
+    left:30px;
+}
+
+.absolute-box{
+    position: absolute;
+    background: lightgreen;
+    padding: 10px;
+    /* top:20px; */
+    /* doesnt care if there is content inside or rather any existing content */
+}
+
+.fixed-box{
+    position: fixed;
+    background: lightpink;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,28 @@
+body{
+    background: lightgrey;
+}
+
+h3{
+    font-size: 42px;
+}
+
+@media (max-width: 768px) {
+    h3{
+        
+        font-size: 32px;
+    }
+    body{
+        background: lightgreen;
+    }
+    /* 768px is usually the width of a tablet */
+}
+
+@media (max-width: 600px) {
+    body{
+        background: lightblue;
+    }
+    h3{
+        font-size: 24px;
+        /* 600px is usually the width of a phone */
+    }
+}

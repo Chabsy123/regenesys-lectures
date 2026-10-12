@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  /* no webpage puts white background on the body element by default*/
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8%;
+  width: 100%;
+  /* giving the left and right padding of 8& makes sure that the nav element is not too close to the edges of the screen and is not cut off and is also responsive*/
+  background: #83656558;
+  color: #cac1c1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* z-index: 10; */
+  margin: 10px;
+  /* margin is used to make sure that the nav element is not too close to the edges of the screen*/
+  border-radius: 10px;
+  position: -webkit-sticky;
+  /* Support for older Safari versions */
+  position: sticky;
+  /* The engine driving the stickiness */
+  top: 0;
+  /* Tells the browser exactly where to snap the nav */
+  z-index: 1000;
+  /* Keeps the navbar layered above underlying text/images */
+  /* z-index is used to make sure that the nav element is on top of the other elements on the page, but the negative value makes sure that it is below the other elements*/
+}
+/* font-size: 20px; */
+/* em is a relative unit based on the font size of its closest parent element, div being the parent element of p in this case*/
+
+/* root em is relative to the parent element of the html root element, which is the browser window*/
+
+/* px is a relative unit that is not scalable, less accessible, em is a relative unit based on the font size of its parent element. for consistency among parent to child elements, em is preferred over px*/
+
+nav h1 {
+  color: #2e2c2c;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+nav h1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+}
+
+nav ul li:hover {
+  color: #2e2c2c;
+  transform: scale(1.1);
+}
+
+.hero {
+  height: 90vh;
+  /* because of the navbar is 10% of the screen height, the hero element should be 90% of the screen height */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80](https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80");
+  /* this allows you to write text on it while also dimming the background*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8%;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(182, 183, 184, 0.381);
+}
+/* glassmorphism in modern CSS means that the background is transparent and the border is a glass-like material that is transparent*/
+
+.search-box input,
+.search-box select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  flex: 1;
+  /* Specifies the components of a flexible length: the flex grow factor and flex shrink factor, and the flex basis, and also the alignment. It is given to the child and not to the parent. The flex property is shorthand for flex-grow, flex-shrink, flex-basis with the syntax being flex: <flex-grow> <flex-shrink> <flex-basis>, increases the width and not the height in proportion to the content of the element, use ratio e.g four boxes, 1:1:1:1 */
+}
+
+.search-box button {
+  background: #032651;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box button:hover {
+  background: #1457a8b0;
+  color: #252424;
+}
+
+.search-box input::placeholder {
+  color: #b0aeae;
+}
+
+.search-box input:focus {
+  border: 2px solid #b0aeae76;
+}
+
+.destinations {
+  padding: 60px 8%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+/* read on grid */
+
+.card {
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* object-fit is used to specify how the image should be resized to fit the container */
+  transition: 0.5s;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  /* scale is used to "increase" the size of the image */
+}
+
+.card-info {
+  position: absolute;
+  /* 100px is constant regardless of the use case while 100% is dependent on the screen size */
+  bottom: 0;
+  color: #fff;
+  padding: 15px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  width: 100%;
+}
