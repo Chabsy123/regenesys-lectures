@@ -130,9 +130,60 @@ counting();
 // there are two arguments in a promise: resolve and reject. resolve is used to resolve the promise which is also a callback function and reject is used to reject the promise.
 // do the tasks in a sequence without nesting
 // definition of promises(without reject)-
-const prom = new Promise((resolve) => {
-    resolve("Alright, it's resolved");
-})
+// const prom = new Promise((resolve) => {
+//     resolve("Alright, it's resolved");
+// })
 
-prom.then(res => console.log(res))
+// prom.then(res => console.log(res))
 // console.log(prom);
+
+// chaining
+function task1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Task 1 is completed");
+            resolve();
+        }, 6000);
+    })
+}
+
+function task2() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Task 2 is completed");
+            resolve();
+        }, 3000);
+    })
+}
+
+function task3() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Task 3 is completed");
+            resolve();
+        }, 1000);
+    })
+}
+
+// resolution of a promise
+task1()
+    .then(() => task2())
+    .then(() => task3())
+    .then(() => console.log("All tasks are completed"));
+ 
+// the above code will run the task1 function, then wait for the task1 to complete, then run the task2 function, wait for the task2 to complete, run the task3 function, wait for the task3 to complete, and then log "All tasks are completed" to the console.
+
+// the above code will run the task1 function, then wait for the task1 to complete, then run the task2 function, wait for the task2 to complete, run the task3 function, wait for the task3 to complete, and then log "All tasks are completed" to the console.
+
+// or you can use async await which is a more modern way of writing asynchronous code and what it does is that without async, await will not run. Async makes the environment wait for the promise to resolve or reject before moving on to the next line of code.
+
+// async function runTask() {
+//     await task1();
+//     await task2();
+//     await task3();
+//     console.log("All tasks are completed");
+// }
+
+// runTask();
+
+// the difference between then and async await is that then is a method that is called on a promise and it takes a callback function as an argument. The callback function is executed when the promise is resolved or rejected. Async await is a more modern way of writing asynchronous code and it makes the code look more like synchronous code. It allows you to write asynchronous code in a more readable and maintainable way.
